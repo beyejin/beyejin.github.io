@@ -1,6 +1,1 @@
-### spartacoding club  
-## 이력서 템플릿  
-  
-  
----
-Copyright ⓒ TeamSparta All rights reserved.
+## 이력서 탬플릿을 이용한 자기소개서 만들기
