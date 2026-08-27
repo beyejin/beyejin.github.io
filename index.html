@@ -5,12 +5,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://scccurri.github.io/portfolio/index.html" />
-    <meta property="og:title" content="한예진 이력서" />
-    <meta property="og:image" content="image/OGimage.png" />
-    <meta property="og:description" content="한예진 이력서입니다." />
-    <meta property="og:site_name" content="SCC Portfolio" />
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://beyejin.github.io/" />
+    <meta property="og:title" content="한예진 | 서버·백엔드 개발자" />
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/104360383?v=4" />
+    <meta property="og:description" content="Java/Spring 기반 백엔드와 AI·검색 시스템을 만드는 개발자, 한예진입니다." />
+    <meta property="og:site_name" content="YEJIN HAN" />
+    <meta property="og:locale" content="ko_KR" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
@@ -120,6 +120,16 @@
             margin: 0 auto;
             max-width: 8rem;
             margin-top: 2.19rem;
+        }
+
+        .side-bar-logo-text {
+            color: var(--main-organization-color);
+            font-size: 1.05rem;
+            font-weight: bold;
+            letter-spacing: 0.18rem;
+            line-height: 1.35;
+            margin-top: 2.19rem;
+            text-align: center;
         }
 
         .side-bar-profile {
@@ -396,6 +406,15 @@
             line-height: normal;
         }
 
+        .license-text a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .license-text a:hover {
+            text-decoration: underline;
+        }
+
         .education {
             position: relative;
             width: 15.0625rem;
@@ -555,6 +574,15 @@
             font-size: 0.9rem;
             letter-spacing: 0;
             line-height: normal;
+        }
+
+        .intro-logo-text {
+            color: var(--main-font-color);
+            font-size: 5rem;
+            font-weight: bold;
+            letter-spacing: 0.35rem;
+            line-height: 13.125rem;
+            text-align: center;
         }
 
         .intro-row-line {
@@ -1220,37 +1248,36 @@
             <!-- side-bar -->
             <div class="side-bar">
                 <div class="side-bar-contents">
-                    <img class="side-bar-logo w-full" src="image/basiclogo.svg" />
+                    <div class="side-bar-logo-text" aria-label="한예진">YEJIN<br />HAN</div>
                     <div class="side-bar-profile">
-                        <img class="side-bar-profile-picture size-full" src="image/profile_image.png" />
+                        <img class="side-bar-profile-picture size-full" src="https://avatars.githubusercontent.com/u/104360383?v=4" alt="한예진 프로필 사진" />
                     </div>
                     <div class="name-tag">
-                        <div class="name font-bold">김르탄</div>
-                        <div class="sub-name font-regular">풀스택 개발자</div>
+                        <div class="name font-bold">한예진</div>
+                        <div class="sub-name font-regular">서버·백엔드 개발자</div>
                     </div>
                     <div class="info">
                         <div class="info-detail">
                             <object class="info-detail-icon svg-filter" data="image/detail-1.svg" color="red"></object>
                             <div class="info-detail-exp font-regular">
-                                JavaScript를 활용하여 <br />React/Node.js 풀스택 개발을 하고
-                                있습니다.
+                                Java/Spring 기반 백엔드와 <br />AI·검색 시스템을 만들고 있습니다.
                             </div>
                         </div>
                         <div class="info-detail">
                             <img class="info-detail-icon svg-filter" src="image/detail-2.svg" />
                             <div class="info-detail-exp font-regular">
-                                2000.08.15 / 서울 중랑구
+                                가천대학교 소프트웨어전공 / 2023.03~재학 중
                             </div>
                         </div>
                         <div class="info-detail">
                             <img class="info-detail-icon svg-filter" src="image/detail-3.svg" />
                             <div class="info-detail-exp font-regular">
-                                jiwoong.choi.dev@gmail.com
+                                hanroona8844@naver.com
                             </div>
                         </div>
                         <div class="info-detail">
                             <img class="info-detail-icon svg-filter" src="image/detail-4.svg" />
-                            <div class="info-detail-exp font-regular">010-0000-0000</div>
+                            <div class="info-detail-exp font-regular">github.com/beyejin</div>
                         </div>
                     </div>
                 
@@ -1258,15 +1285,15 @@
                 <div class="strength-set">
                     <div class="strength">
                         <img class="strength-img svg-filter" src="image/strength-1.png" />
-                        <div class="strength-text font-regular">의사소통</div>
+                        <div class="strength-text font-regular">문제 해결</div>
                     </div>
                     <div class="strength">
                         <img class="strength-img svg-filter" src="image/strength-2.png" />
-                        <div class="strength-text font-regular">도전 정신</div>
+                        <div class="strength-text font-regular">측정과 검증</div>
                     </div>
                     <div class="strength">
                         <img class="strength-img svg-filter" src="image/strength-3.png" />
-                        <div class="strength-text font-regular">리더십</div>
+                        <div class="strength-text font-regular">문서화</div>
                     </div>
                 </div>
                 <div class="line"></div>
@@ -1279,42 +1306,21 @@
                     <div class="skill-item w-full">
                         <div class="skill-set w-full">
                             <div class="point svg-filter"></div>
-                            <div class="skill-text font-bold">HTML</div>
-                        </div>
-                        <div class="skill-bar" data-progress="3">
-                            <div class="skill-bar-progress">
-                                <div class="skill-bar-rectangle"></div>
-                                <div class="skill-bar-o1"></div>
-                                <div class="skill-bar-o2"></div>
-                            </div>
+                            <div class="skill-text font-bold">Java</div>
                         </div>
                     </div>
 
                     <div class="skill-item">
                         <div class="skill-set">
                             <div class="point svg-filter"></div>
-                            <div class="skill-text font-bold">CSS</div>
-                        </div>
-                        <div class="skill-bar" data-progress="10">
-                            <div class="skill-bar-progress">
-                                <div class="skill-bar-rectangle"></div>
-                                <div class="skill-bar-o1"></div>
-                                <div class="skill-bar-o2"></div>
-                            </div>
+                            <div class="skill-text font-bold">Spring Boot</div>
                         </div>
                     </div>
 
                     <div class="skill-item">
                         <div class="skill-set">
                             <div class="point svg-filter"></div>
-                            <div class="skill-text font-bold">JavaScript</div>
-                        </div>
-                        <div class="skill-bar" data-progress="15">
-                            <div class="skill-bar-progress">
-                                <div class="skill-bar-rectangle"></div>
-                                <div class="skill-bar-o1"></div>
-                                <div class="skill-bar-o2"></div>
-                            </div>
+                            <div class="skill-text font-bold">PostgreSQL</div>
                         </div>
                     </div>
 
@@ -1323,39 +1329,29 @@
                             <div class="point svg-filter"></div>
                             <div class="skill-text font-bold">React</div>
                         </div>
-                        <div class="skill-bar" data-progress="0">
-                            <div class="skill-bar-progress">
-                                <div class="skill-bar-rectangle"></div>
-                                <div class="skill-bar-o1"></div>
-                                <div class="skill-bar-o2"></div>
-                            </div>
-                        </div>
                     </div>
 
                     <div class="skill-item">
                         <div class="skill-set">
                             <div class="point svg-filter"></div>
-                            <div class="skill-text font-bold">Node.js</div>
-                        </div>
-                        <div class="skill-bar" data-progress="0">
-                            <div class="skill-bar-progress">
-                                <div class="skill-bar-rectangle"></div>
-                                <div class="skill-bar-o1"></div>
-                                <div class="skill-bar-o2"></div>
-                            </div>
+                            <div class="skill-text font-bold">Swift</div>
                         </div>
                     </div>
                 </div>
                 <div class="line"></div>
                 <div class="license">
-                    <img class="license-img svg-filter" src="image/license.svg" />
-                    <div class="license-title font-regular">LICENSE</div>
+                    <img class="license-img svg-filter" src="image/github.svg" alt="" />
+                    <div class="license-title font-regular">LINKS</div>
                     <div class="license-wrap">
                         <div class="license-content">
-                            <div class="license-text font-bold">SQLD 자격증</div>
+                            <div class="license-text font-bold">
+                                <a href="https://github.com/beyejin" target="_blank" rel="noopener noreferrer">GitHub / beyejin</a>
+                            </div>
                         </div>
                         <div class="license-content">
-                            <div class="license-text font-bold">ADsP 자격증</div>
+                            <div class="license-text font-bold">
+                                <a href="https://zin-be.tistory.com/" target="_blank" rel="noopener noreferrer">Tistory / zin-be</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1366,13 +1362,9 @@
                         <div class="education-text font-regular">EDUCATION</div>
                     </div>
                     <div class="education-content w-full">
-                        <div class="education-name font-bold">스파르타 고등학교</div>
+                        <div class="education-name font-bold">가천대학교</div>
                         <p class="education-detail font-regular">
-                            2013.03.02 ~ 2016.02.14 / 서울시 중랑구
-                        </p>
-                        <div class="education-name font-bold">스파르타 대학교</div>
-                        <p class="education-detail font-regular">
-                            2016.03.02 ~ 2020.02.20 / 4.35 / 서울시 은평구
+                            소프트웨어전공<br />2023.03 ~ 재학 중
                         </p>
                     </div>
                 </div>
@@ -1384,9 +1376,9 @@
                 <!-- 자기소개 div -->
                 <div class="intro-div">
                     <div class="intro-frame">
-                        <img class="intro-logo w-full" src="image/basiclogo.svg" />
+                        <div class="intro-logo intro-logo-text" aria-hidden="true">YEJIN HAN</div>
                         <div class="intro-picture-frame">
-                            <img class="intro-picture" src="image/profile_image.png" />
+                            <img class="intro-picture" src="https://avatars.githubusercontent.com/u/104360383?v=4" alt="한예진 프로필 사진" />
                         </div>
                         <div class="intro-row-line"></div>
 
@@ -1397,13 +1389,12 @@
                         <div class="intro-content">
                             <img class="intro-quote svg-filter" src="image/quote.svg" />
                             <p class="intro-text font-bold">
-                                변화에 빠르게 적응하는<br />개발자, 김르탄입니다.
+                                가정을 한 번 더 질문하고<br />직접 측정해 확인하는 개발자
                             </p>
                             <p class="intro-text-detail font-regular">
-                                다이내믹한 기업 문화와 빠른 성장에 매력을 느꼈습니다.
-                                <br />저의 창의적이고 유연한 사고로 팀에 신선한 아이디어를
-                                제공하고 싶습니다. <br />함께 도전하고 성장하는 과정에서 큰
-                                성취를 이루고 싶습니다.
+                                Java/Spring 기반 백엔드 개발과 AI·검색 시스템에 관심이 있습니다.
+                                <br />동작하는 코드에서 멈추지 않고, 테스트·실행 계획·실측으로
+                                <br />문제의 원인을 확인하고 문서로 남깁니다.
                             </p>
                         </div>
                     </div>
@@ -1419,69 +1410,35 @@
                         <div class="exp-card-frame flex-center size-full">
                             <div class="exp-card">
                                 <div class="exp-card-period-wrapper flex-center">
-                                    <div class="exp-card-period font-regular">6개월</div>
+                                    <div class="exp-card-period font-regular">재직 중</div>
                                 </div>
                                 <div class="exp-card-company font-bold">
-                                    팀스파르타
+                                    홈인스팩터
                                 </div>
-                                <div class="exp-card-term">2023.01~2023.06</div>
+                                <div class="exp-card-term">2024.02~현재</div>
                                 <div class="exp-card-team">
                                     <div class="exp-card-team-name font-bold">
-                                        콘텐츠팀, 콘텐츠 프로듀서
+                                        현장 관리·고객 조율
                                     </div>
                                 </div>
                                 <div class="exp-card-task">
                                     <div class="point svg-filter"></div>
                                     <div class="exp-card-task-text font-regular">
-                                        프론트엔드 개발 및 유지보수
+                                        아파트 하자검수 대행 관리
                                     </div>
                                 </div>
                                 <div class="exp-card-proj">
                                     <div class="exp-card-proj-name font-bold">
-                                        고객 관리 시스템 개선 프로젝트
+                                        매니저에서 팀장으로 역할 확장
                                     </div>
                                 </div>
                                 <div class="exp-card-task-term font-regular">
-                                    2023.02~2023.05
+                                    2024.02~현재
                                 </div>
                                 <div class="exp-card-task-detail">
                                     <div class="point svg-filter"></div>
                                     <div class="exp-card-task-text font-regular">
-                                        React를 사용한 대시보드 UI 개선 및 성능 최적화
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="exp-card">
-                                <div class="exp-card-period-wrapper flex-center">
-                                    <div class="exp-card-period font-regular">4개월</div>
-                                </div>
-                                <div class="exp-card-company font-bold">
-                                    회사2
-                                </div>
-                                <div class="exp-card-term">2022.08~2022.11</div>
-                                <div class="exp-card-team">
-                                    <div class="exp-card-team-name font-bold">
-                                        백엔드 개발팀, 인턴 개발자
-                                    </div>
-                                </div>
-                                <div class="exp-card-task">
-                                    <div class="point svg-filter"></div>
-                                    <div class="exp-card-task-text font-regular">
-                                        RESTful API 개발 및 데이터베이스 관리
-                                    </div>
-                                </div>
-                                <div class="exp-card-proj">
-                                    <div class="exp-card-proj-name font-bold">
-                                        소셜 미디어 분석 플랫폼
-                                    </div>
-                                </div>
-                                <div class="exp-card-task-term font-regular">
-                                    2022.09~2022.11
-                                </div>
-                                <div class="exp-card-task-detail">
-                                    <div class="point svg-filter"></div>
-                                    <div class="exp-card-task-text font-regular">
-                                        Node.js와 Express를 사용한 API 개발 및 MongoDB 연동
+                                        고객을 설득하고 조율하며 현장 업무의 품질과 흐름을 관리
                                     </div>
                                 </div>
                             </div>
@@ -1489,31 +1446,65 @@
                                 <div class="exp-card-period-wrapper flex-center">
                                     <div class="exp-card-period font-regular">3개월</div>
                                 </div>
-                                <div class="exp-card-company font-bold">회사3</div>
-                                <div class="exp-card-term">2022.05~2022.07</div>
+                                <div class="exp-card-company font-bold">
+                                    다이아스키스쿨
+                                </div>
+                                <div class="exp-card-term">2025.12~2026.02</div>
                                 <div class="exp-card-team">
                                     <div class="exp-card-team-name font-bold">
-                                        풀스택 개발팀, 프리랜서 개발자
+                                        스키 강사
                                     </div>
                                 </div>
                                 <div class="exp-card-task">
                                     <div class="point svg-filter"></div>
                                     <div class="exp-card-task-text font-regular">
-                                        웹 애플리케이션 개발 및 배포
+                                        다양한 연령·국적의 수강생 지도
                                     </div>
                                 </div>
                                 <div class="exp-card-proj">
                                     <div class="exp-card-proj-name font-bold">
-                                        온라인 학습 플랫폼 개발
+                                        초보자 눈높이 커뮤니케이션
                                     </div>
                                 </div>
                                 <div class="exp-card-task-term font-regular">
-                                    2022.05~2022.07
+                                    2025.12~2026.02
                                 </div>
                                 <div class="exp-card-task-detail">
                                     <div class="point svg-filter"></div>
                                     <div class="exp-card-task-text font-regular">
-                                        React와 Django를 사용한 풀스택 웹 애플리케이션 개발
+                                        상대방의 어려운 지점을 파악해 이해하기 쉽게 설명
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="exp-card">
+                                <div class="exp-card-period-wrapper flex-center">
+                                    <div class="exp-card-period font-regular">4개월</div>
+                                </div>
+                                <div class="exp-card-company font-bold">캐리비안베이</div>
+                                <div class="exp-card-term">2025.06~2025.09</div>
+                                <div class="exp-card-team">
+                                    <div class="exp-card-team-name font-bold">
+                                        라이프가드
+                                    </div>
+                                </div>
+                                <div class="exp-card-task">
+                                    <div class="point svg-filter"></div>
+                                    <div class="exp-card-task-text font-regular">
+                                        안전 관리 및 현장 대응
+                                    </div>
+                                </div>
+                                <div class="exp-card-proj">
+                                    <div class="exp-card-proj-name font-bold">
+                                        빠른 판단과 책임 있는 대응
+                                    </div>
+                                </div>
+                                <div class="exp-card-task-term font-regular">
+                                    2025.06~2025.09
+                                </div>
+                                <div class="exp-card-task-detail">
+                                    <div class="point svg-filter"></div>
+                                    <div class="exp-card-task-text font-regular">
+                                        다양한 상황에서 우선순위를 판단하고 현장에 대응
                                     </div>
                                 </div>
                             </div>
@@ -1528,33 +1519,22 @@
                     </div>
                     <div class="proj-container">
                         <div class="proj" onclick="location.href='project.html'">
-                            <img src="image/p1.png" alt="프로젝트 이미지" class="proj-main-img" />
+                            <img src="https://raw.githubusercontent.com/bamsongi-club/albam-mate/main/docs/assets/albam-mate-screens.jpg" alt="알밤메이트 화면" class="proj-main-img" />
                             <div class="proj-content">
-                                <div class="proj-content-title font-bold">프로젝트1</div>
+                                <div class="proj-content-title font-bold">알밤메이트</div>
                                 <p class="proj-content-text font-regular">
-                                    유학생 커뮤니티 플랫폼 개발을 목표로 하였습니다. 유학생들이
-                                    서로 정보를 공유하고 교류할 수 있도록 게시판, 채팅, 이벤트
-                                    관리 기능을 구현했습니다. React와 Node.js를 사용하여 웹
-                                    애플리케이션을 개발하였고, MongoDB를 통해 유연한 데이터
-                                    관리를 실현했습니다. 이를 통해 유학생들이 보다 쉽게
-                                    네트워킹에 필요한 정보를 얻을 수 있는 플랫폼을 제공했습니다.
+                                    보드게임 모임 탐색·개설·참여를 연결하는 모바일웹 매칭 플랫폼입니다.
+                                    게임 카탈로그·검색 도메인과 실시간 매칭 채팅을 구현했습니다.
                                 </p>
                             </div>
                         </div>
                         <div class="proj" onclick="location.href='project2.html'">
-                            <img src="image/p2.png" alt="프로젝트 이미지" class="proj-main-img" />
+                            <img src="https://raw.githubusercontent.com/beyejin/ai-usage-banner/main/docs/preview.png" alt="AI Usage Banner 화면" class="proj-main-img" />
                             <div class="proj-content">
-                                <div class="proj-content-title font-bold">
-                                    프로젝트2
-                                </div>
+                                <div class="proj-content-title font-bold">AI Usage Banner</div>
                                 <p class="proj-content-text font-regular">
-                                    CodeCollaborate는 개발자들을 위한 협업 플랫폼입니다.
-                                    개발자들이 프로젝트를 함께 작업하고 코드 리뷰, 실시간 채팅,
-                                    이슈 트래킹 기능을 활용할 수 있도록 설계되었습니다. React와
-                                    Node.js를 사용하여 개발된 이 웹 애플리케이션은 효율적인 협과
-                                    원활한 커뮤니케이션을 지원합니다. 이를 통해 개발자들은 전
-                                    세계 어디서든 팀워크를 강화하고 프로젝트를 성공적으로 완수할
-                                    수 있습니다.
+                                    Codex와 Claude 여러 계정의 사용량을 보여주는 macOS 메뉴바 앱입니다.
+                                    계정 분리·테마·로컬 캐시를 지원합니다.
                                 </p>
                             </div>
                         </div>
