@@ -119,20 +119,29 @@
         }
 
         .project-row,
-        .project-github-link {
+        .project-github-link,
+        .project-brochure-link {
             display: flex;
             align-items: center;
             gap: 0.6rem;
         }
 
-        .project-github-link a {
+        .project-github-link a,
+        .project-brochure-link a {
             color: var(--main-font-color);
             font-size: 0.6rem;
             text-decoration: none;
         }
 
-        .project-github-link a:hover {
+        .project-github-link a:hover,
+        .project-brochure-link a:hover {
             text-decoration: underline;
+        }
+
+        .project-brochure-link-mark {
+            color: var(--main-font-color);
+            font-size: 1rem;
+            line-height: 1;
         }
 
         .project-icon {
@@ -529,6 +538,10 @@
                     <img src="image/github.svg" class="project-icon" />
                     <a href="https://github.com/bamsongi-club/albam-mate" target="_blank" rel="noopener noreferrer">GitHub
                         Repository</a>
+                </div>
+                <div class="project-brochure-link">
+                    <span class="project-brochure-link-mark" aria-hidden="true">↗</span>
+                    <a href="https://app.notion.com/p/teamsparta/6-3ba2dc3ef5148086b6fae01f27f9bfb6" target="_blank" rel="noopener noreferrer">프로젝트 브로셔</a>
                 </div>
             </div>
             <div class="project-card-tool">
