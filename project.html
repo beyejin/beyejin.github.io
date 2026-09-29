@@ -192,69 +192,78 @@
             height: 0.5rem;
         }
 
-        .project-pictures {
-            display: flex;
-            justify-content: center;
+        .project-showcase {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(12rem, 16rem);
+            gap: 2rem;
             align-items: center;
-            position: relative;
             margin: 3.1rem;
-            overflow: hidden;
-            height: 25rem;
         }
 
-        .project-picture-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 100%;
-            position: relative;
-        }
-
-        .project-picture {
-            position: absolute;
-            transition: all 0.5s ease-in-out;
-            width: 34rem;
-            height: 19.1rem;
-        }
-
-        .project-picture.side {
-            transform: scale(0.75) translateX(-50%);
-            z-index: 1;
-            opacity: 0.3;
-        }
-
-        .project-picture.side.right {
-            transform: scale(0.75) translateX(50%);
-        }
-
-        .project-picture.center {
-            z-index: 2;
-            transform: scale(1) translateX(0);
-            opacity: 1;
-        }
-
-        .project-div-image {
-            width: 100%;
-            height: 100%;
-            display: block;
+        .project-showcase-visual {
+            margin: 0;
+            padding: 1.2rem;
+            border: 1px solid var(--main-font-color);
             border-radius: 0.9rem;
-            object-fit: cover;
+            background: var(--main-bg-color);
         }
 
-        .project-prev,
-        .project-next {
-            position: absolute;
-            cursor: pointer;
-            z-index: 3;
+        .project-showcase-image {
+            display: block;
+            width: 100%;
+            aspect-ratio: 2.4;
+            object-fit: contain;
         }
 
-        .project-prev {
-            left: 0.6rem;
+        .project-showcase-caption {
+            padding-left: 1.5rem;
+            border-left: 1px solid var(--main-font-color);
         }
 
-        .project-next {
-            right: 0.6rem;
+        .project-showcase-eyebrow {
+            margin: 0 0 0.6rem;
+            color: var(--text-color-secondary);
+            font-size: 0.6rem;
+            letter-spacing: 0.08em;
+        }
+
+        .project-showcase-title {
+            margin: 0 0 1.2rem;
+            color: var(--main-font-color);
+            font-size: 1.3rem;
+            line-height: 1.3;
+        }
+
+        .project-flow {
+            display: grid;
+            gap: 0.7rem;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            counter-reset: flow;
+        }
+
+        .project-flow-item {
+            display: grid;
+            grid-template-columns: 1.7rem 1fr;
+            gap: 0.5rem;
+            align-items: baseline;
+            padding-top: 0.7rem;
+            border-top: 1px solid rgba(29, 31, 32, 0.25);
+            color: var(--text-color-secondary);
+            font-size: 0.7rem;
+            line-height: 1.4;
+            counter-increment: flow;
+        }
+
+        .project-flow-item::before {
+            content: "0" counter(flow);
+            color: var(--main-font-color);
+            font-size: 0.6rem;
+        }
+
+        .project-flow-item strong {
+            color: var(--main-font-color);
         }
 
         .detail-card {
@@ -432,32 +441,19 @@
                 width: 100%;
             }
 
-            .project-pictures {
+            .project-showcase {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
                 margin: 1.5rem;
             }
 
-            .project-picture-wrapper {
-                width: 100%;
+            .project-showcase-visual {
+                padding: 0.8rem;
             }
 
-            .project-div-image {
-                width: 80%;
-                height: auto;
-                display: block;
-                margin: 0 auto;
-                border-radius: 0.9rem;
-            }
-
-            .project-picture.side {
-                display: none;
-            }
-
-            .project-picture.center {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                height: auto;
+            .project-showcase-caption {
+                padding-left: 0;
+                border-left: none;
             }
 
             .detail-card {
@@ -563,21 +559,21 @@
                 </div>
             </div>
         </div>
-        <div class="project-pictures">
-            <img class="project-prev" src="image/prev.svg" onclick="moveImages('prev')" />
-            <div class="project-picture-wrapper">
-                <div class="project-picture side" id="image1">
-                    <img src="https://raw.githubusercontent.com/bamsongi-club/albam-mate/main/docs/assets/albam-mate-screens.jpg" class="project-div-image" alt="알밤메이트 화면" />
-                </div>
-                <div class="project-picture center" id="image2">
-                    <img src="https://raw.githubusercontent.com/bamsongi-club/albam-mate/main/docs/assets/albam-mate-screens.jpg" class="project-div-image" alt="알밤메이트 검색 화면" />
-                </div>
-                <div class="project-picture side" id="image3">
-                    <img src="https://raw.githubusercontent.com/bamsongi-club/albam-mate/main/docs/assets/albam-mate-screens.jpg" class="project-div-image" alt="알밤메이트 매칭 화면" />
-                </div>
+        <section class="project-showcase" aria-labelledby="project-showcase-title">
+            <figure class="project-showcase-visual">
+                <img src="https://raw.githubusercontent.com/bamsongi-club/albam-mate/main/docs/assets/albam-mate-screens.jpg" class="project-showcase-image" alt="홈, 게임 찾기, 모임 찾기, 채팅 화면으로 구성된 알밤메이트 앱 흐름" />
+            </figure>
+            <div class="project-showcase-caption">
+                <p class="project-showcase-eyebrow">PRODUCT FLOW</p>
+                <h2 class="project-showcase-title" id="project-showcase-title">모임이 이어지는<br />앱의 흐름</h2>
+                <ol class="project-flow">
+                    <li class="project-flow-item"><span><strong>홈</strong>에서 열릴 모임을 확인</span></li>
+                    <li class="project-flow-item"><span><strong>게임 찾기</strong>로 원하는 게임을 탐색</span></li>
+                    <li class="project-flow-item"><span><strong>모임 찾기</strong>에서 일정과 인원을 비교</span></li>
+                    <li class="project-flow-item"><span><strong>채팅</strong>으로 참여자와 실시간 소통</span></li>
+                </ol>
             </div>
-            <img class="project-next" src="image/next.svg" onclick="moveImages('next')" />
-        </div>
+        </section>
         <div class="detail-card">
             <div class="detail-card-a"></div>
             <div class="detail-card-b"></div>
@@ -670,88 +666,6 @@
             </div>
         </div>
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            if (document.getElementById("image1")) {
-                updateImages();
-            }
-        });
-
-        function getUrlParameter(name) {
-            const url = window.location.href;
-            const param = url.match(new RegExp(`[?&]${name}=([^&]*)`));
-            return param && param[1];
-        }
-
-        let currentImageIndex = 0;
-        const projectImages = {
-            project1: [
-                "https://raw.githubusercontent.com/bamsongi-club/albam-mate/main/docs/assets/albam-mate-screens.jpg",
-                "https://raw.githubusercontent.com/bamsongi-club/albam-mate/main/docs/assets/albam-mate-screens.jpg",
-                "https://raw.githubusercontent.com/bamsongi-club/albam-mate/main/docs/assets/albam-mate-screens.jpg",
-            ],
-            project2: [
-                "https://raw.githubusercontent.com/beyejin/ai-usage-banner/main/docs/preview.png",
-                "https://raw.githubusercontent.com/beyejin/ai-usage-banner/main/docs/status-preview.png",
-                "https://raw.githubusercontent.com/beyejin/ai-usage-banner/main/docs/compact-batteries-preview.png",
-            ],
-        };
-
-        function updateImages(isAnimating) {
-            const images = document.querySelectorAll(".project-picture");
-            const isMobile = window.innerWidth <= 768;
-
-            images.forEach((image, index) => {
-                const position = (index - currentImageIndex + 3) % 3;
-
-                if (position === 0) {
-                    image.className = `project-picture center ${isAnimating ? "animating" : ""
-                        }`;
-                    image.style.left = isMobile ? "0" : "50%";
-                    image.style.transform = isMobile ? "none" : "translate(-50%, 0) scale(1)";
-                } else if (position === 1) {
-                    image.className = `project-picture side right ${isAnimating ? "animating" : ""
-                        }`;
-                    image.style.left = isMobile ? "0" : "75%";
-                    image.style.transform = isMobile
-                        ? "none"
-                        : "translate(-50%, 0) scale(0.75)";
-                } else {
-                    image.className = `project-picture side ${isAnimating ? "animating" : ""
-                        }`;
-                    image.style.left = isMobile ? "0" : "25%";
-                    image.style.transform = isMobile
-                        ? "none"
-                        : "translate(-50%, 0) scale(0.75)";
-                }
-
-                image.style.opacity = position === 0 ? "1" : "0.3";
-                image.style.zIndex = position === 0 ? "2" : "1";
-            });
-        }
-
-        function moveImages(direction) {
-            const isMobile = window.innerWidth <= 768;
-
-            if (!isMobile) {
-                const wrapper = document.querySelector(".project-picture-wrapper");
-                wrapper.style.transition = "transform 0.5s ease-in-out";
-            }
-
-            if (direction === "next") {
-                currentImageIndex = (currentImageIndex + 1) % 3;
-            } else if (direction === "prev") {
-                currentImageIndex = (currentImageIndex - 1 + 3) % 3;
-            }
-
-            updateImages(true);
-
-            setTimeout(() => {
-                updateImages(false);
-            }, 500);
-        }
-
-    </script>
 </body>
 
 </html>
